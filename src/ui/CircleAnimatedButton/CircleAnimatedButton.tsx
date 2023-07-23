@@ -22,15 +22,11 @@ const CircleAnimatedButton = ({ delay, handlePress }: CircleAnimatedButtonProps)
   const [isDisabled, setIsDisabled] = useState(false);
 
   const strokeOffset = useSharedValue(CIRCUM_REFERENCE);
-  const animatedCircleProps = useAnimatedProps(() => {
-    const callback = () => {
+  const animatedCircleProps = useAnimatedProps(() => ({
+    strokeDashoffset: withTiming(strokeOffset.value, { duration: delay }, () => {
       runOnJS(setIsDisabled)(false);
-    };
-
-    return {
-      strokeDashoffset: withTiming(strokeOffset.value, { duration: delay }, callback),
-    };
-  });
+    }),
+  }));
 
   return (
     <TouchableOpacity

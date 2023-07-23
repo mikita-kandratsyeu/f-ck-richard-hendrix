@@ -1,12 +1,11 @@
 import React, { useCallback, useState } from 'react';
 import { SafeAreaView, View } from 'react-native';
 import { Audio } from 'expo-av';
-import { AUDIO_FILES, GITHUB_REPO_LINK } from '../../constants';
+import { GITHUB_REPO_LINK } from '../../constants';
 import { CircleAnimatedButton, LinkButton } from '../../ui';
 import { GitHubSvg } from '../../svg';
 
 import { styles } from './styles';
-import { getSoundFile } from '../../utils';
 
 const Main = () => {
   const [delay, setDelay] = useState(2000);
