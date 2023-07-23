@@ -1,0 +1,1 @@
+export { GitHubSvg } from './GitHubSvg';
