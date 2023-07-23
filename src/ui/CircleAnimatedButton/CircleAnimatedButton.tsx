@@ -14,11 +14,16 @@ import { styles } from './styles';
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 
 type CircleAnimatedButtonProps = {
+  buttonText?: string;
   delay: number;
   handlePress: () => void | Promise<void>;
 };
 
-const CircleAnimatedButton = ({ delay, handlePress }: CircleAnimatedButtonProps) => {
+const CircleAnimatedButton = ({
+  buttonText = 'Hit me',
+  delay,
+  handlePress,
+}: CircleAnimatedButtonProps) => {
   const [isDisabled, setIsDisabled] = useState(false);
 
   const strokeOffset = useSharedValue(CIRCUM_REFERENCE);
@@ -39,7 +44,7 @@ const CircleAnimatedButton = ({ delay, handlePress }: CircleAnimatedButtonProps)
       }}
       style={styles.root}
     >
-      <Text style={styles.text}>F*ck</Text>
+      <Text style={styles.text}>{buttonText}</Text>
       <Svg height="50%" width="50%" viewBox="0 0 100 100">
         <AnimatedCircle
           animatedProps={animatedCircleProps}
