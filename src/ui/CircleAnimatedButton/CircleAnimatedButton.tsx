@@ -53,7 +53,7 @@ const CircleAnimatedButton = ({
           r="45"
           stroke="#8bc34a"
           strokeWidth="5"
-          fill="rgba(255,255,255,0.2)"
+          fill="#ff9e22"
           strokeDasharray={`${CIRCUM_REFERENCE}`}
         />
       </Svg>

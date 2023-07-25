@@ -11,5 +11,6 @@ export const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: '600',
     position: 'absolute',
+    zIndex: 2,
   },
 });

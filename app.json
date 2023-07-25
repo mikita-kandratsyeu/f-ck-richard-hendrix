@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "f-ck-richard-hendrix",
-    "slug": "f-ck-richard-hendrix",
+    "name": "Hit me Richi!",
+    "slug": "hitMeRichi",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#3f50b5"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -18,13 +18,20 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.hitme.richi",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#3f50b5"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1be6b638-2a6d-4263-9e8e-86dec38b560d"
+      }
     }
   }
 }
